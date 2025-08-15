@@ -140,6 +140,9 @@ function runPomodoro(course, stage, breakTime) {
   }, 1000);
 }
 
-// On page load
-updateCourseDropdown();
-renderCourses();
+
+// On page load, after DOM is ready
+document.addEventListener("DOMContentLoaded", function() {
+  updateCourseDropdown();
+  renderCourses();
+});
