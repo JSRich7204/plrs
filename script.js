@@ -55,8 +55,8 @@
             <div class="controls">
               <label>${stage} (Goal: ${goal}h, Logged: ${current.toFixed(2)}h)</label>
               <input type="number" min="0" step="0.25" id="${course.id}_${stage}_input" />
-              <button onclick="editHours('${course.id}', '${stage}')">✏️ Edit</button>
-              <button onclick="undoHours('${course.id}', '${stage}')">↩️ Undo</button>
+              <button  id = "edit "onclick="editHours('${course.id}', '${stage}')">✏️ Edit</button>
+              <button id = "undo" onclick="undoHours('${course.id}', '${stage}')">↩️ Undo</button>
             </div>
             <div class="bar" style="width:${percent}%"></div>
           `;
