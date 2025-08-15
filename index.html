@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PLRS Tracker</title>
+        <link rel="stylesheet" type = "text/css" href = "style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href=
+        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <script src = "script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>PLRS Tracker</h1>
+        <div id="reset-message"></div>
+        <button onclick="manualReset()">Reset Progress</button>
+
+        <h2>Add a Course</h2>
+        <input id="newCourseName" placeholder="Course Name" />
+        <input type="number" id="newP" placeholder="P" />
+        <input type="number" id="newL" placeholder="L" />
+        <input type="number" id="newR" placeholder="R" />
+        <input type="number" id="newS" placeholder="S" />
+        <button onclick="addCourse()">Add Course</button>
+
+    <div id="courses"></div>
+
+        <div class="timer-box">
+            <h2>Pomodoro Timer</h2>
+            <select id="pomodoroCourse"></select>
+            <select id="pomodoroStage">
+            <option value="P">Preview</option>
+            <option value="L">Lecture</option>
+            <option value="R">Review</option>
+            <option value="S">Study</option>
+            </select>
+            <input type="number" id="focusMinutes" value="25" /> min focus
+            <input type="number" id="breakMinutes" value="5" /> min break
+            <button onclick="startPomodoro()">Start</button>
+            <h3 id="pomodoroCountdown">Not running</h3>
+        </div>
+    </body>
+</html>
